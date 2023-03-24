@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Montaga', serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100%);
+}
+
+:root{
+    --main-color: #F62682
+}
+
+.app{
+    position: relative;
+    margin-top: 5%;
+    min-width: 400px;
+    /* width: 100vw; */
+    /* height: 650px; */
+    overflow: hidden;
+    /* background-color: #F3F2F7; */
+}
+
+/* ẩn thanh scroll */
+.app::-webkit-scrollbar {
+    width: 0; 
+    height: 0;
+}
+
+.main__nav .main__nav-icon.active{
+    color: var(--main-color);
+}
+
+.song.active{
+    background-color: var(--main-color);
+    opacity: 0.8;
+}
+/* this css help you create a fake label when you click, it look opacity  */
+
+.song:active{
+    opacity: 0.8;
+}
+
+.song.active .song__name,
+.song.active .song__extension,
+.song.active .song__description{
+    color: #fff;
+}
+
+.dashboard{
+    position: fixed;
+    z-index: 2;
+    width: 350px;
+    top: 0;
+    margin: calc(10px + 5%) 24px 0;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 4px 5px 5px #e6e5eb;
+}
+
+.header_nav{
+    padding: 14px 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--main-color);
+    align-items: center;
+}
+
+.nav__icon-plus,
+.nav__icon-down{
+    font-size: 20px;
+}
+
+.nav__icon-down{
+    margin-left: 26px;
+}
+
+.nav__content-heading{
+    font-size: 14px;
+    font-family: none;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.nav__content-name{
+    color: #333;
+    font-size: 24px;
+
+}
+
+.nav__icon-plus{
+    margin-right: 26px;
+}
+
+/* .slide{
+    position: relative;
+    height: 200px;
+    opacity: 0.2;
+    background: url(./asset/img/background_slide.jpg) top center / cover no-repeat;
+} */
+.slide{
+    display: flex;
+    margin: auto;
+    width: 180px;
+}
+
+.slide__img{
+    width: 100%;
+    padding-top: 100%;
+    background: url() top center / cover no-repeat ;
+    border-radius: 50%;
+    /* background-color: #333; */
+    /* background-size: cover; */
+    margin: auto;
+}
+
+.main__nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 0 0;
+    align-items: center;
+}
+
+.main__nav-icon{
+    color: #555;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.nav__icon-play{
+    color: var(--main-color);
+    font-size: 42px;
+}
+
+.dashboard .icon-pause {
+  display: none;
+}
+
+.dashboard.playing .icon-pause {
+  display: inline-block;
+}
+
+.dashboard.playing .icon-play {
+  display: none;
+}
+
+.progress {
+    width: 88%;
+    display: block;
+    outline: none;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    opacity: 0.7;
+    margin: 0 auto;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+  
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.playlist{
+    margin-top: 360px;
+}
+
+.song{
+    display: flex;
+    align-items: center;
+    width: 338px;
+    height: 54px;
+    margin: 10px auto 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 4px 5px 5px #e6e5eb;
+}
+
+.song__img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 10px ; 
+}
+
+.song__content{
+    flex: 1;
+    margin-left: 4px;
+}
+
+.song__name{
+    font-size: 18px;
+}
+
+.song__description{
+    font-family: none;
+    color: #555;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.song__extension{
+    margin: 0 16px ;
+    color: #555;
+    font-size: 18px;
+}
