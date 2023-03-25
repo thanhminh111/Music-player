@@ -8,8 +8,9 @@
 body{
     display: flex;
     justify-content: center;
-    background: linear-gradient(45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100%);
+    background: linear-gradient(to right, pink, rgb(211, 107, 211));
 }
+
 
 :root{
     --main-color: #F62682
@@ -18,18 +19,10 @@ body{
 .app{
     position: relative;
     margin-top: 5%;
-    min-width: 400px;
-    /* width: 100vw; */
-    /* height: 650px; */
+    min-width: 600px;
     overflow: hidden;
-    /* background-color: #F3F2F7; */
 }
 
-/* ẩn thanh scroll */
-.app::-webkit-scrollbar {
-    width: 0; 
-    height: 0;
-}
 
 .main__nav .main__nav-icon.active{
     color: var(--main-color);
@@ -54,13 +47,12 @@ body{
 .dashboard{
     position: fixed;
     z-index: 2;
-    width: 350px;
+    width: 600px;
     top: 0;
-    margin: calc(10px + 5%) 24px 0;
-    padding-bottom: 10px;
+    margin-top: calc(10px + 1.5%);
+    padding-bottom: 15px;
     border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 4px 5px 5px #e6e5eb;
+    background-color: rgba(255,255,255,0.8);
 }
 
 .header_nav{
@@ -172,18 +164,27 @@ body{
 }
 
 .playlist{
-    margin-top: 360px;
+    margin-top: 320px;
+    padding: 5px 0;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 5px;
+    overflow-y: auto;
+    height: 370px;
 }
+
+::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
 
 .song{
     display: flex;
     align-items: center;
-    width: 338px;
+    width: 570px;
     height: 54px;
     margin: 10px auto 0;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.6);
     border-radius: 4px;
-    box-shadow: 4px 5px 5px #e6e5eb;
 }
 
 .song__img{

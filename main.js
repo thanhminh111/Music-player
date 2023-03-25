@@ -174,17 +174,21 @@ const app = {
             iterations: Infinity //vo han   
         })
         slideAnimate.pause()
-
+        
         //Xử lý scroll top: phóng to thu nhỏ slide
-        document.onscroll = function(){
-            const scrollTop = window.scrollY || document.documentElement.scrollTop
-            const newSlideWidth = slideWidth - scrollTop; 
+        // document.onscroll = function(){
+        //     const scrollTop = window.scrollY || document.documentElement.scrollTop
+        //     const newSlideWidth = slideWidth - scrollTop; 
 
-            //set cho kích thước của slide giảm dần khi scroll --> và kiểm tra giá trị lớn hơn 0 hay k(là kiểm tra loại trừ số âm, khi do mình scroll nhanh quá)
-            slide.style.width = newSlideWidth > 0 ? + newSlideWidth +'px': 0;
-            //set cho nó khi thu nhỏ sẽ mờ dần dựa theo tỉ lệ kích thước thay đổi
-            slide.style.opacity = newSlideWidth / slideWidth;
-        }
+            
+        //     //set cho kích thước của slide giảm dần khi scroll --> và kiểm tra giá trị lớn hơn 0 hay k(là kiểm tra loại trừ số âm, khi do mình scroll nhanh quá)
+        //     slide.style.width = newSlideWidth > 0 ? + newSlideWidth +'px': 0;
+        //     //set cho nó khi thu nhỏ sẽ mờ dần dựa theo tỉ lệ kích thước thay đổi
+        //     slide.style.opacity = newSlideWidth / slideWidth;
+            
+        // }
+
+        
 
         //Xử lý khi onclick play
         playBtn.onclick = function(){
@@ -286,6 +290,7 @@ const app = {
                 }
             }
         }
+        
         
 
     },
